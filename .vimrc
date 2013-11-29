@@ -33,3 +33,6 @@ set t_Co=256
 autocmd BufNewFile,BufRead *.json set ft=javascript
 autocmd BufNewFile,BufRead *.gyp set ft=javascript
 
+"autosave global session
+:let g:session_autosave = 'yes'
+:let g:session_autoload = 'yes'
