@@ -4,7 +4,9 @@
 :set shiftwidth=4
 :set expandtab
 :syntax on
-:set mouse=a
+if has('mouse')
+    :set mouse=a
+endif
 :set number
 :set nocursorline
 :set nocursorcolumn
@@ -36,3 +38,5 @@ autocmd BufNewFile,BufRead *.gyp set ft=javascript
 "autosave global session
 :let g:session_autosave = 'yes'
 :let g:session_autoload = 'yes'
+
+" vim: set ts=4 sw=4 expandtab :
