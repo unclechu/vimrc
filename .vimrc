@@ -39,4 +39,7 @@ autocmd BufNewFile,BufRead *.gyp set ft=javascript
 :let g:session_autosave = 'yes'
 :let g:session_autoload = 'yes'
 
+"always show hidden files in NERDTree
+:let NERDTreeShowHidden = 1
+
 " vim: set ts=4 sw=4 expandtab :
