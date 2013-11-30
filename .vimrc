@@ -42,4 +42,7 @@ autocmd BufNewFile,BufRead *.gyp set ft=javascript
 "always show hidden files in NERDTree
 :let NERDTreeShowHidden = 1
 
+"native vim russian keyboard layout
+set keymap=russian-jcukenwin
+
 " vim: set ts=4 sw=4 expandtab :
