@@ -15,7 +15,7 @@ endif
 :set fileencodings=utf8,cp1251
 
 "hot keys
-:map <F5> :NERDTreeToggle<CR>
+:map <F5> :NERDTreeMirrorToggle<CR>
 :map <F6> :BufExplorer<CR>
 
 "terminal 256 colors
