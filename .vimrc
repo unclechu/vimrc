@@ -19,7 +19,7 @@ endif
 :map <F6> :BufExplorer<CR>
 
 "terminal 256 colors
-set t_Co=256
+:set t_Co=256
 :colorscheme jellybeans
 
 "gvim
@@ -43,6 +43,15 @@ autocmd BufNewFile,BufRead *.gyp set ft=javascript
 :let NERDTreeShowHidden = 1
 
 "native vim russian keyboard layout
-set keymap=russian-jcukenwin
+function ResetKeymap()
+    :set keymap=
+    :set keymap=russian-jcukenwin
+    :set iminsert=0
+    :set imsearch=-1
+endfunction
+command ResetKeymap call ResetKeymap()
+autocmd InsertEnter * call ResetKeymap()
+autocmd InsertLeave * call ResetKeymap()
+ResetKeymap
 
 " vim: set ts=4 sw=4 expandtab :
