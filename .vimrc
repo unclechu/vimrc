@@ -1,5 +1,6 @@
 :set autoindent
 :set hlsearch
+:set smartcase
 :set tabstop=4
 :set shiftwidth=4
 :set expandtab
