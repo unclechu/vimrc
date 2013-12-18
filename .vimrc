@@ -22,6 +22,7 @@ endif
 "terminal 256 colors
 :set t_Co=256
 :colorscheme jellybeans
+:set term=screen-256color
 
 "gvim
 :set guioptions-=T "hide toolbar
