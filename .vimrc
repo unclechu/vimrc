@@ -20,9 +20,13 @@ endif
 :map <F6> :BufExplorer<CR>
 
 "terminal 256 colors
-:set t_Co=256
-:colorscheme jellybeans
-:set term=screen-256color
+set t_Co=256
+colorscheme jellybeans
+set term=screen-256color
+if &l:term != 'screen-256color'
+    set term=xterm-256color
+endif
+echo 'term='.&l:term
 
 "gvim
 :set guioptions-=T "hide toolbar
