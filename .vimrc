@@ -20,6 +20,9 @@ set fileencodings=utf8,cp1251
 map <F5> :NERDTreeMirrorToggle<CR>
 map <F6> :BufExplorer<CR>
 
+"reset search
+map <F3> :let @/ = ""<CR>
+
 "terminal 256 colors
 set t_Co=256
 colorscheme jellybeans
