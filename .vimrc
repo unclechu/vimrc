@@ -49,6 +49,17 @@ if has("gui_running")
     set guioptions-=l "hide scrollbar
     "set lines=999 columns=999 "maximize gvim window
     set lines=50 columns=100
+
+"in terminal
+else
+    "using meta-hotkeys
+    let c = 'a'
+    while c <= 'z'
+      exec "set <A-".c.">=\e".c
+      exec "imap \e".c." <A-".c.">"
+      let c = nr2char(char2nr(c) + 1)
+    endw
+    set timeout ttimeoutlen=50
 endif
 
 "auto syntax hilight
