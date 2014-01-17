@@ -42,13 +42,14 @@ set t_Co=256
 colorscheme jellybeans
 
 "gvim
-set guioptions-=T "hide toolbar
-set guioptions-=m "hide menu
-set guioptions-=r "hide scrollbar
-set guioptions-=l "hide scrollbar
-"if has("gui_running")
-"    set lines=999 columns=999
-"endif
+if has("gui_running")
+    set guioptions-=T "hide toolbar
+    set guioptions-=m "hide menu
+    set guioptions-=r "hide scrollbar
+    set guioptions-=l "hide scrollbar
+    "set lines=999 columns=999 "maximize gvim window
+    set lines=50 columns=100
+endif
 
 "auto syntax hilight
 autocmd BufNewFile,BufRead *.json set ft=javascript
