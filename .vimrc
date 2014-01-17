@@ -29,6 +29,7 @@ noremap! <A-j> <Down>
 noremap! <A-k> <Up>
 noremap! <A-l> <Right>
 
+"provide forward deleting in Insert mode
 noremap! <A-d> <Del>
 
 "terminal 256 colors
