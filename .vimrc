@@ -28,6 +28,11 @@ noremap! <A-h> <Left>
 noremap! <A-j> <Down>
 noremap! <A-k> <Up>
 noremap! <A-l> <Right>
+"no more hands flutter
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
 
 "provide forward deleting in Insert mode
 noremap! <A-d> <Del>
