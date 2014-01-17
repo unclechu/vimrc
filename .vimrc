@@ -57,7 +57,7 @@ let g:session_autoload = 'yes'
 let NERDTreeShowHidden = 1
 
 "native vim russian keyboard layout
-function ResetKeymap()
+function! ResetKeymap()
     set keymap=
     set keymap=russian-jcukenwin
     set iminsert=0
@@ -67,5 +67,19 @@ command ResetKeymap call ResetKeymap()
 autocmd InsertEnter * call ResetKeymap()
 autocmd InsertLeave * call ResetKeymap()
 ResetKeymap
+
+"for paste in terminal (by Ctrl+Shift+V) without incremented shifting in every line
+function! ToggleAutoindent()
+    if &autoindent
+        set noautoindent
+        echo 'Auto-indent is disabled'
+    else
+        set autoindent
+        echo 'Auto-indent is enabled'
+    endif
+endfunction
+command ToggleAutoindent call ToggleAutoindent()
+imap <F2> <Esc>:ToggleAutoindent<CR>l
+nmap <F2> <Esc>:ToggleAutoindent<CR>
 
 " vim: set ts=4 sw=4 expandtab :
