@@ -35,7 +35,7 @@ inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
 
 "provide forward deleting in Insert mode
-noremap! <A-d> <Del>
+noremap! <A-x> <Del>
 
 "terminal 256 colors
 set t_Co=256
