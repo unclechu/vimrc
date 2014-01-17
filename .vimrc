@@ -23,6 +23,14 @@ map <F6> :BufExplorer<CR>
 "reset search
 map <F3> :let @/ = ""<CR>
 
+"provide hjkl movements in Insert and Command-line mode via the <Alt> modifier key
+noremap! <A-h> <Left>
+noremap! <A-j> <Down>
+noremap! <A-k> <Up>
+noremap! <A-l> <Right>
+
+noremap! <A-d> <Del>
+
 "terminal 256 colors
 set t_Co=256
 colorscheme jellybeans
