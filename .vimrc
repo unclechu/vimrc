@@ -33,6 +33,10 @@ inoremap <Left>  <NOP>
 inoremap <Right> <NOP>
 inoremap <Up>    <NOP>
 inoremap <Down>  <NOP>
+noremap  <Left>  <NOP>
+noremap  <Right> <NOP>
+noremap  <Up>    <NOP>
+noremap  <Down>  <NOP>
 
 "provide forward deleting in Insert mode
 noremap! <A-x> <Del>
