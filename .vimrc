@@ -29,17 +29,21 @@ noremap! <A-j> <Down>
 noremap! <A-k> <Up>
 noremap! <A-l> <Right>
 "no more hands flutter
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
 noremap  <Left>  <NOP>
 noremap  <Right> <NOP>
 noremap  <Up>    <NOP>
 noremap  <Down>  <NOP>
+inoremap <Left>  <NOP>
+inoremap <Right> <NOP>
+inoremap <Up>    <NOP>
+inoremap <Down>  <NOP>
+cnoremap <Left>  <NOP>
+cnoremap <Right> <NOP>
+cnoremap <Up>    <NOP>
+cnoremap <Down>  <NOP>
 
 "provide forward deleting in Insert mode
-noremap! <A-x> <Del>
+inoremap <C-l> <Del>
 
 "terminal 256 colors
 set t_Co=256
