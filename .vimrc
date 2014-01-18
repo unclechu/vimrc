@@ -42,8 +42,9 @@ cnoremap <Right> <NOP>
 cnoremap <Up>    <NOP>
 cnoremap <Down>  <NOP>
 
-"provide forward deleting in Insert mode
+"provide forward deleting in Insert and Command-Line modes
 inoremap <C-l> <Del>
+cnoremap <C-l> <Del>
 
 "terminal 256 colors
 set t_Co=256
