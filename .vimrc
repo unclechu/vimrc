@@ -15,6 +15,7 @@ set nowrap
 set autochdir
 "set showtabline=2 " TABS always
 set fileencodings=utf8,cp1251
+set modeline
 
 "hot keys
 map <F5> :NERDTreeMirrorToggle<CR>
