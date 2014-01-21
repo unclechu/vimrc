@@ -72,8 +72,11 @@ else
 endif
 
 "auto syntax hilight
-autocmd BufNewFile,BufRead *.json set ft=javascript
-autocmd BufNewFile,BufRead *.gyp set ft=javascript
+if has('autocmd')
+    autocmd BufNewFile,BufRead *.json set ft=javascript
+    autocmd BufNewFile,BufRead *.gyp set ft=javascript
+    autocmd BufNewFile,BufRead Makefile set noexpandtab
+endif
 
 "autosave global session
 let g:session_autosave = 'yes'
