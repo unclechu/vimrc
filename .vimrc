@@ -24,25 +24,6 @@ map <F6> :BufExplorer<CR>
 "reset search
 map <F3> :let @/ = ""<CR>
 
-"provide hjkl movements in Insert and Command-line mode via the <Alt> modifier key
-noremap! <A-h> <Left>
-noremap! <A-j> <Down>
-noremap! <A-k> <Up>
-noremap! <A-l> <Right>
-"no more hands flutter
-noremap  <Left>  <NOP>
-noremap  <Right> <NOP>
-noremap  <Up>    <NOP>
-noremap  <Down>  <NOP>
-inoremap <Left>  <NOP>
-inoremap <Right> <NOP>
-inoremap <Up>    <NOP>
-inoremap <Down>  <NOP>
-cnoremap <Left>  <NOP>
-cnoremap <Right> <NOP>
-cnoremap <Up>    <NOP>
-cnoremap <Down>  <NOP>
-
 "provide forward deleting in Insert and Command-Line modes
 inoremap <C-l> <Del>
 cnoremap <C-l> <Del>
@@ -59,17 +40,6 @@ if has("gui_running")
     set guioptions-=l "hide scrollbar
     "set lines=999 columns=999 "maximize gvim window
     set lines=50 columns=100
-
-"in terminal
-else
-    "using meta-hotkeys
-    let c = 'a'
-    while c <= 'z'
-      exec "set <A-".c.">=\e".c
-      exec "imap \e".c." <A-".c.">"
-      let c = nr2char(char2nr(c) + 1)
-    endw
-    set timeout ttimeoutlen=50
 endif
 
 "auto syntax hilight
