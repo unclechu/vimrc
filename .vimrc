@@ -27,6 +27,10 @@ map <F3> :let @/ = ""<CR>
 inoremap <C-l> <Del>
 cnoremap <C-l> <Del>
 
+"custom digraphs
+digraphs '' 769 "accent
+digraphs 3. 8230 "dots
+
 "terminal 256 colors
 set t_Co=256
 colorscheme jellybeans
