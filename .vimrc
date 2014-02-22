@@ -18,7 +18,7 @@ set modeline
 
 "hot keys
 map <F5> :NERDTreeMirrorToggle<CR>
-map <F6> :BufExplorer<CR>
+map <F6> :BufExplorerRelative<CR>
 
 "reset search
 map <F3> :let @/ = ""<CR>
