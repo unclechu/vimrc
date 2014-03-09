@@ -85,4 +85,12 @@ command ToggleAutoindent call ToggleAutoindent()
 imap <F2> <Esc>:ToggleAutoindent<CR>l
 nmap <F2> <Esc>:ToggleAutoindent<CR>
 
+function! NewTabWithNerdTree()
+    tabnew
+    NERDTreeMirrorToggle
+endfunction
+command NewTabWithNerdTree call NewTabWithNerdTree()
+imap <F1> <Esc>:NewTabWithNerdTree<CR>
+nmap <F1> <Esc>:NewTabWithNerdTree<CR>
+
 " vim: set ts=4 sw=4 expandtab :
