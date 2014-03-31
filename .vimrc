@@ -16,6 +16,8 @@ set nowrap
 set fileencodings=utf8,cp1251
 set modeline
 
+let NERDTreeIgnore = ['\.swp', '\.pyc']
+
 "hot keys
 map <F5> :NERDTreeMirrorToggle<CR>
 map <F6> :BufExplorerRelative<CR>
