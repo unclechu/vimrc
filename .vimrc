@@ -95,5 +95,11 @@ endfunction
 command NewTabWithNerdTree call NewTabWithNerdTree()
 imap <F1> <Esc>:NewTabWithNerdTree<CR>
 nmap <F1> <Esc>:NewTabWithNerdTree<CR>
+imap <F4> <Esc><C-W><Right>:tabclose<CR>
+nmap <F4> <Esc><C-W><Right>:tabclose<CR>
+imap <F7> <Esc>:tabprevious<CR>
+nmap <F7> <Esc>:tabprevious<CR>
+imap <F8> <Esc>:tabnext<CR>
+nmap <F8> <Esc>:tabnext<CR>
 
 " vim: set ts=4 sw=4 expandtab :
