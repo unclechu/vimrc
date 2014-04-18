@@ -102,4 +102,42 @@ nmap <F7> <Esc>:tabprevious<CR>
 imap <F8> <Esc>:tabnext<CR>
 nmap <F8> <Esc>:tabnext<CR>
 
+function! GuiTabLabel()
+    let label = ''
+    let bufnrlist = tabpagebuflist(v:lnum)
+
+    for bufnr in bufnrlist
+        if getbufvar(bufnr, "&modified")
+            let label = '+'
+            break
+        endif
+    endfor
+
+    let label .= v:lnum . ': '
+
+    let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+
+    if name == ''
+        if &buftype == 'quickfix'
+            let name = '[Quickfix List]'
+        else
+            let name = '[No Name]'
+        endif
+    else
+        let dirname = fnamemodify(name, ':p:h')
+        let tail = fnamemodify(name, ':p:t')
+        let name = tail
+        if dirname != ''
+            " shortify paths
+            let dirname = substitute(dirname, '\([^/]\)[^/]\+', '\1', 'g')
+            let name = dirname . '/' . name
+        endif
+    endif
+
+    let label .= name
+
+    return label
+endfunction
+set guitablabel=%{GuiTabLabel()}
+
 " vim: set ts=4 sw=4 expandtab :
