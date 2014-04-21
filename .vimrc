@@ -127,10 +127,21 @@ function! GuiTabLabel()
         let dirname = fnamemodify(name, ':p:h')
         let tail = fnamemodify(name, ':p:t')
         let name = tail
+
+        " shortify paths
         if dirname != ''
-            " shortify paths
+            " remove path to current dir
+            let cwd = getcwd()
+            let dirnameLeftPart = strpart(dirname, 0, strlen(cwd))
+            if cwd == dirnameLeftPart
+                let dirname = strpart(dirname, strlen(cwd) + 1)
+            endif
+
+            " shortify
             let dirname = substitute(dirname, '\([^/]\)[^/]\+', '\1', 'g')
-            let name = dirname . '/' . name
+            if dirname != ''
+                let name = dirname . '/' . name
+            endif
         endif
     endif
 
