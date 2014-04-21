@@ -1,4 +1,11 @@
-" relative paths (of pwd) in buffers list
+"=============================================================================
+" File:        BufListRelativePath.vim
+" Description: Relative paths (of cwd) in buffers list
+" Maintainer:  Viacheslav Lotsmanov <lotsmanov89 at gmail dot com>
+" Last Change: 21 April, 2014
+" License:     GNU/GPLv3 by Free Software Foundation
+" Required:    "BufExplorer" vim plugin
+"=============================================================================
 
 function s:BufExplorerRelative()
     BufExplorer
