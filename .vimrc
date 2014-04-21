@@ -103,51 +103,51 @@ imap <F8> <Esc>:tabnext<CR>
 nmap <F8> <Esc>:tabnext<CR>
 
 function! GuiTabLabel()
-    let label = ''
-    let bufnrlist = tabpagebuflist(v:lnum)
+    let l:label = ''
+    let l:bufnrlist = tabpagebuflist(v:lnum)
 
-    for bufnr in bufnrlist
-        if getbufvar(bufnr, "&modified")
-            let label = '+'
+    for l:bufnr in l:bufnrlist
+        if getbufvar(l:bufnr, "&modified")
+            let l:label = '+'
             break
         endif
     endfor
 
-    let label .= v:lnum . ': '
+    let l:label .= v:lnum . ': '
 
-    let name = bufname(bufnrlist[tabpagewinnr(v:lnum) - 1])
+    let l:name = bufname(l:bufnrlist[tabpagewinnr(v:lnum) - 1])
 
-    if name == ''
+    if l:name == ''
         if &buftype == 'quickfix'
-            let name = '[Quickfix List]'
+            let l:name = '[Quickfix List]'
         else
-            let name = '[No Name]'
+            let l:name = '[No Name]'
         endif
     else
-        let dirname = fnamemodify(name, ':p:h')
-        let tail = fnamemodify(name, ':p:t')
-        let name = tail
+        let l:dirname = fnamemodify(l:name, ':p:h')
+        let l:tail = fnamemodify(l:name, ':p:t')
+        let l:name = l:tail
 
         " shortify paths
-        if dirname != ''
+        if l:dirname != ''
             " remove path to current dir
-            let cwd = getcwd()
-            let dirnameLeftPart = strpart(dirname, 0, strlen(cwd))
-            if cwd == dirnameLeftPart
-                let dirname = strpart(dirname, strlen(cwd) + 1)
+            let l:cwd = getcwd()
+            let l:dirnameLeftPart = strpart(l:dirname, 0, strlen(l:cwd))
+            if l:cwd == l:dirnameLeftPart
+                let l:dirname = strpart(l:dirname, strlen(l:cwd) + 1)
             endif
 
             " shortify
-            let dirname = substitute(dirname, '\([^/]\)[^/]\+', '\1', 'g')
-            if dirname != ''
-                let name = dirname . '/' . name
+            let l:dirname = substitute(l:dirname, '\([^/]\)[^/]\+', '\1', 'g')
+            if l:dirname != ''
+                let l:name = l:dirname . '/' . l:name
             endif
         endif
     endif
 
-    let label .= name
+    let l:label .= l:name
 
-    return label
+    return l:label
 endfunction
 set guitablabel=%{GuiTabLabel()}
 
