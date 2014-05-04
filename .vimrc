@@ -1,20 +1,27 @@
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set autoindent
+set smartindent
+set noexpandtab
+
 set hlsearch
 set smartcase
-set tabstop=4
-set shiftwidth=4
-set expandtab
-syntax on
-if has('mouse')
-    set mouse=a
-endif
+
+set nowrap
 set number
 set nocursorline
 set nocursorcolumn
-set nowrap
+
+if has('mouse')
+    set mouse=a
+endif
+
 "set showtabline=2 " show tabs always
 set fileencodings=utf8,cp1251
 set modeline
+
+syntax on
 
 let NERDTreeIgnore = ['\.swp', '\.pyc']
 
