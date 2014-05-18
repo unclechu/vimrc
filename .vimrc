@@ -20,6 +20,7 @@ endif
 "set showtabline=2 " show tabs always
 set fileencodings=utf8,cp1251
 set modeline
+set foldmethod=marker
 
 syntax on
 
@@ -125,4 +126,4 @@ nmap <F8> <Esc>:tabnext<CR>
 
 " tabs hotkeys }}}1
 
-" vim: set ts=4 sw=4 et foldmethod=marker :
+" vim: set et ts=4 sts=4 sw=4 :
