@@ -22,6 +22,10 @@ set fileencodings=utf8,cp1251
 set modeline
 set foldmethod=marker
 
+set backup
+set backupdir=~/.vim_backup,.,/tmp
+set directory=~/.vim_swap,.,/tmp
+
 syntax on
 
 let NERDTreeIgnore = ['\.swp', '\.pyc']
