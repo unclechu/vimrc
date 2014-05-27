@@ -1,0 +1,1 @@
+IndentConsistencyCop-1.44.vmb: call delete('/home/unclechu/.vim/autoload/IndentConsistencyCop.vim')|call delete('/home/unclechu/.vim/plugin/IndentConsistencyCop.vim')|call delete('/home/unclechu/.vim/doc/IndentConsistencyCop.txt')
