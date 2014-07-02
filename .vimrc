@@ -97,9 +97,11 @@ ResetKeymap
 function! ToggleAutoindent()
     if &autoindent
         set noautoindent
+        set nosmartindent
         echo 'Auto-indent is disabled'
     else
         set autoindent
+        set smartindent
         echo 'Auto-indent is enabled'
     endif
 endfunction
