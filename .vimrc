@@ -50,6 +50,8 @@ digraphs 3. 8230 "dots
 set t_Co=256
 colorscheme jellybeans
 
+highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
+
 " hl tabs by hotkey {{{1
 
 let g:listchars_original=&listchars
