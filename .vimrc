@@ -120,15 +120,20 @@ ResetKeymap
 
 " toggle autoindent {{{1
 
+let g:smartindent_enabled = &smartindent
+
 "for paste in terminal (by Ctrl+Shift+V) without incremented shifting in every line
 function! ToggleAutoindent()
     if &autoindent
+        let g:smartindent_enabled = &smartindent
         set noautoindent
         set nosmartindent
         echo 'Auto-indent is disabled'
     else
         set autoindent
-        set smartindent
+        if g:smartindent_enabled
+            set smartindent
+        endif
         echo 'Auto-indent is enabled'
     endif
 endfunction
