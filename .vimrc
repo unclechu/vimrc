@@ -12,6 +12,7 @@ set nowrap
 set number
 set nocursorline
 set nocursorcolumn
+set colorcolumn=80
 
 if has('mouse')
     set mouse=a
