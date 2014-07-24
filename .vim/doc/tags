@@ -51,6 +51,9 @@
 :UseVimball	pi_vimball.txt	/*:UseVimball*
 :VimballList	pi_vimball.txt	/*:VimballList*
 Align-copyright	Align.txt	/*Align-copyright*
+CurrentLineWhitespaceOff	better-whitespace.txt	/*CurrentLineWhitespaceOff*
+DisableWhitespace	better-whitespace.txt	/*DisableWhitespace*
+EnableWhitespace	better-whitespace.txt	/*EnableWhitespace*
 IndentConsistencyCop-assumptions	IndentConsistencyCop.txt	/*IndentConsistencyCop-assumptions*
 IndentConsistencyCop-configuration	IndentConsistencyCop.txt	/*IndentConsistencyCop-configuration*
 IndentConsistencyCop-dependencies	IndentConsistencyCop.txt	/*IndentConsistencyCop-dependencies*
@@ -158,6 +161,9 @@ NERDTreeOptions	NERD_tree.txt	/*NERDTreeOptions*
 NERDTreeRender()	NERD_tree.txt	/*NERDTreeRender()*
 NERD_commenter.txt	NERD_commenter.txt	/*NERD_commenter.txt*
 NERD_tree.txt	NERD_tree.txt	/*NERD_tree.txt*
+StripWhitespace	better-whitespace.txt	/*StripWhitespace*
+ToggleStripWhitespaceOnSave	better-whitespace.txt	/*ToggleStripWhitespaceOnSave*
+ToggleWhitespace	better-whitespace.txt	/*ToggleWhitespace*
 Vimball-copyright	pi_vimball.txt	/*Vimball-copyright*
 align	Align.txt	/*align*
 align-align	Align.txt	/*align-align*
@@ -249,6 +255,7 @@ alignmap-t~	Align.txt	/*alignmap-t~*
 alignmaps	Align.txt	/*alignmaps*
 alignusage	Align.txt	/*alignusage*
 b:indentconsistencycop_result	IndentConsistencyCop.txt	/*b:indentconsistencycop_result*
+better-whitespace.txt	better-whitespace.txt	/*better-whitespace.txt*
 bufexplorer	bufexplorer.txt	/*bufexplorer*
 bufexplorer-changelog	bufexplorer.txt	/*bufexplorer-changelog*
 bufexplorer-credits	bufexplorer.txt	/*bufexplorer-credits*
