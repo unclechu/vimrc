@@ -50,6 +50,29 @@ digraphs 3. 8230 "dots
 set t_Co=256
 colorscheme jellybeans
 
+" hl tabs by hotkey {{{1
+
+let g:listchars_original=&listchars
+let g:listchars_onlytab='tab:>-'
+
+function! ToggleTabsHL()
+    let l:lc = &listchars
+    if l:lc == g:listchars_onlytab
+        let &listchars = g:listchars_original
+        set nolist
+    else
+        let &listchars = g:listchars_onlytab
+        set list
+        let g:listchars_original = l:lc
+    endif
+endfunction
+command ToggleTabsHL call ToggleTabsHL()
+
+imap <F9> <Esc>:ToggleTabsHL<CR>l
+nmap <F9> <Esc>:ToggleTabsHL<CR>
+
+" hl tabs by hotkey }}}1
+
 if has("gui_running") " gui {{{1
     set guioptions-=T "hide toolbar
     set guioptions-=m "hide menu
