@@ -166,4 +166,4 @@ nmap <F8> <Esc>:tabnext<CR>
 
 " tabs hotkeys }}}1
 
-" vim: set et ts=4 sts=4 sw=4 :
+" vim: set et ts=4 sts=4 sw=4 fenc=utf-8 :
