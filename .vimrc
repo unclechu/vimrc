@@ -101,6 +101,15 @@ let g:session_autoload = 'yes'
 "always show hidden files in NERDTree
 let NERDTreeShowHidden = 1
 
+" set tab size {{{1
+function! TabSize(size)
+    let &ts = a:size
+    let &sts = a:size
+    let &sw = a:size
+endfunction
+command! -nargs=1 TabSize call TabSize(<f-args>)
+" set tab size }}}1
+
 " reset keymap {{{1
 
 "native vim russian keyboard layout
