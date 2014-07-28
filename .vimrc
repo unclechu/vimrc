@@ -103,11 +103,17 @@ let NERDTreeShowHidden = 1
 
 " set tab size {{{1
 function! TabSize(size)
+    set noet
     let &ts = a:size
     let &sts = a:size
     let &sw = a:size
 endfunction
+function! ETabSize(size)
+    call TabSize(a:size)
+    set et
+endfunction
 command! -nargs=1 TabSize call TabSize(<f-args>)
+command! -nargs=1 ETabSize call ETabSize(<f-args>)
 " set tab size }}}1
 
 " reset keymap {{{1
