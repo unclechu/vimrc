@@ -62,10 +62,12 @@ function! ToggleTabsHL()
     if l:lc == g:listchars_onlytab
         let &listchars = g:listchars_original
         set nolist
+        echo 'Tabs highlighting is disabled'
     else
         let &listchars = g:listchars_onlytab
         set list
         let g:listchars_original = l:lc
+        echo 'Tabs highlighting is enabled'
     endif
 endfunction
 command ToggleTabsHL call ToggleTabsHL()
