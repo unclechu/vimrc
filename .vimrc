@@ -12,7 +12,9 @@ set nowrap
 set number
 set nocursorline
 set nocursorcolumn
-set colorcolumn=80
+if v:version >= 703
+    set colorcolumn=80
+endif
 
 if has('mouse')
     set mouse=a
