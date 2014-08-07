@@ -1,3 +1,4 @@
 *.swp
+*.pyc
 .vim/sessions
 .vim/.netrwhist
