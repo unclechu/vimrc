@@ -25,6 +25,8 @@ set fileencodings=utf8,cp1251
 set modeline
 set foldmethod=marker
 
+let mapleader = ','
+
 "backups and swap {{{1
 
 set backup
