@@ -75,6 +75,20 @@ colorscheme jellybeans
 
 highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
 
+" ExpandAllFolds {{{1
+
+" expand all folds in every tabs and windows
+function! ExpandAllFolds()
+    let l:tab_n = tabpagenr()
+    let l:win_n = winnr()
+    tabdo windo norm! zR
+    exec 'tabn' . l:tab_n
+    exec l:win_n . 'wincmd w'
+endfunction
+command ExpandAllFolds call ExpandAllFolds()
+
+" ExpandAllFolds }}}1
+
 " DeleteHiddenBuffers {{{1
 
 " (c) http://stackoverflow.com/a/8459043/774228
