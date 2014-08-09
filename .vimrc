@@ -75,6 +75,22 @@ colorscheme jellybeans
 
 highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
 
+" DeleteHiddenBuffers {{{1
+
+" (c) http://stackoverflow.com/a/8459043/774228
+function DeleteHiddenBuffers()
+    let tpbl=[]
+    call map(range(1, tabpagenr('$')), 'extend(tpbl, tabpagebuflist(v:val))')
+    for buf in filter(range(1, bufnr('$')), 'bufexists(v:val) && index(tpbl, v:val)==-1')
+        silent execute 'bwipeout' buf
+    endfor
+endfunction
+command DeleteHiddenBuffers call DeleteHiddenBuffers()
+imap <F10> <Esc>:DeleteHiddenBuffers<CR>li
+nmap <F10> <Esc>:DeleteHiddenBuffers<CR>
+
+" DeleteHiddenBuffers }}}1
+
 " hl tabs by hotkey {{{1
 
 let g:listchars_original=&listchars
@@ -86,7 +102,6 @@ function! ToggleTabsHL()
         let &listchars = g:listchars_original
         let l:tab_n = tabpagenr()
         let l:win_n = winnr()
-        setglobal nolist
         tabdo windo set nolist
         exec 'tabn' . l:tab_n
         exec l:win_n . 'wincmd w'
@@ -95,7 +110,6 @@ function! ToggleTabsHL()
         let &listchars = g:listchars_onlytab
         let l:tab_n = tabpagenr()
         let l:win_n = winnr()
-        setglobal list
         tabdo windo set list
         exec 'tabn' . l:tab_n
         exec l:win_n . 'wincmd w'
@@ -105,7 +119,7 @@ function! ToggleTabsHL()
 endfunction
 command ToggleTabsHL call ToggleTabsHL()
 
-imap <F9> <Esc>:ToggleTabsHL<CR>l
+imap <F9> <Esc>:ToggleTabsHL<CR>li
 nmap <F9> <Esc>:ToggleTabsHL<CR>
 
 " hl tabs by hotkey }}}1
@@ -210,7 +224,7 @@ function! ToggleAutoindent()
 endfunction
 command ToggleAutoindent call ToggleAutoindent()
 
-imap <F2> <Esc>:ToggleAutoindent<CR>l
+imap <F2> <Esc>:ToggleAutoindent<CR>li
 nmap <F2> <Esc>:ToggleAutoindent<CR>
 
 " toggle autoindent }}}1
