@@ -171,6 +171,7 @@ if has('autocmd')
     autocmd BufNewFile,BufRead *.gyp set ft=javascript
     autocmd BufNewFile,BufRead Makefile set noexpandtab
     autocmd BufNewFile,BufRead *.ejs set ft=html
+    autocmd BufNewFile,BufRead *.scss set ft=scss.css
 endif
 
 "autosave global session
