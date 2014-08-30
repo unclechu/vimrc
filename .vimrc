@@ -264,4 +264,41 @@ nmap <F8> <Esc>:tabnext<CR>
 
 " tabs hotkeys }}}1
 
+"autoclose {{{1
+
+let g:autoclose_enabled = 0
+
+function! ToggleAutoClose(silent)
+    if g:autoclose_enabled == 0
+        inoremap  {  {}<Left>
+        inoremap  (  ()<Left>
+        inoremap  [  []<Left>
+        inoremap  '  ''<Left>
+        inoremap  "  ""<Left>
+        let g:autoclose_enabled = 1
+        if !a:silent
+            echo 'Autoclose enabled'
+        endif
+    else
+        iunmap  {
+        iunmap  (
+        iunmap  [
+        iunmap  '
+        iunmap  "
+        let g:autoclose_enabled = 0
+        if !a:silent
+            echo 'Autoclose disabled'
+        endif
+    endif
+endfunction
+command ToggleAutoClose call ToggleAutoClose(0)
+
+imap <Leader>b <Esc>:ToggleAutoClose<CR>li
+nmap <Leader>b <Esc>:ToggleAutoClose<CR>
+
+"enable autoclose at start
+call ToggleAutoClose(1)
+
+"autoclose }}}1
+
 " vim: set et ts=4 sts=4 sw=4 fenc=utf-8 :
