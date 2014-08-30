@@ -293,7 +293,6 @@ function! ToggleAutoClose(silent)
 endfunction
 command ToggleAutoClose call ToggleAutoClose(0)
 
-imap <Leader>b <Esc>:ToggleAutoClose<CR>li
 nmap <Leader>b <Esc>:ToggleAutoClose<CR>
 
 "enable autoclose at start
