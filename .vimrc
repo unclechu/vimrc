@@ -270,11 +270,11 @@ let g:autoclose_enabled = 0
 
 function! ToggleAutoClose(silent)
     if g:autoclose_enabled == 0
-        inoremap  {  {}<Left>
-        inoremap  (  ()<Left>
-        inoremap  [  []<Left>
-        inoremap  '  ''<Left>
-        inoremap  "  ""<Left>
+        inoremap  {  {}<Esc>i
+        inoremap  (  ()<Esc>i
+        inoremap  [  []<Esc>i
+        inoremap  '  ''<Esc>i
+        inoremap  "  ""<Esc>i
         let g:autoclose_enabled = 1
         if !a:silent
             echo 'Autoclose enabled'
