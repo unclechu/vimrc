@@ -352,6 +352,10 @@ bufexplorer-usage	bufexplorer.txt	/*bufexplorer-usage*
 bufexplorer-windowlayout	bufexplorer.txt	/*bufexplorer-windowlayout*
 bufexplorer.txt	bufexplorer.txt	/*bufexplorer.txt*
 buffer-explorer	bufexplorer.txt	/*buffer-explorer*
+faust	faust.txt	/*faust*
+faust-intro	faust.txt	/*faust-intro*
+faust-settings	faust.txt	/*faust-settings*
+faust.txt	faust.txt	/*faust.txt*
 g:AlignSkip	Align.txt	/*g:AlignSkip*
 g:alignmaps_euronumber	Align.txt	/*g:alignmaps_euronumber*
 g:alignmaps_usanumber	Align.txt	/*g:alignmaps_usanumber*
