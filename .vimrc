@@ -71,7 +71,7 @@ digraphs 3. 8230 "dots
 
 "terminal 256 colors
 set t_Co=256
-colorscheme jellybeans
+colorscheme tango-morning
 
 highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
 
