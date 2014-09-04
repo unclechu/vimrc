@@ -69,7 +69,7 @@ cnoremap <C-l> <Del>
 digraphs '' 769 "accent
 digraphs 3. 8230 "dots
 
-" color {{{1
+" colors {{{1
 
 let g:colorscheme = 'solarized'
 set t_Co=256
