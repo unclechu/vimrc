@@ -69,11 +69,20 @@ cnoremap <C-l> <Del>
 digraphs '' 769 "accent
 digraphs 3. 8230 "dots
 
-"terminal 256 colors
-set t_Co=256
-colorscheme tango-morning
+" color {{{1
 
-highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
+let g:colorscheme = 'solarized'
+set t_Co=256
+exec 'colorscheme ' . g:colorscheme
+
+"light
+if g:colorscheme == 'tango-morning' || g:colorscheme == 'solarized'
+    highlight SpecialKey guifg=#f4ce81 ctermfg=222 guibg=#efefce ctermbg=230
+else "dark
+    highlight SpecialKey guifg=#340 ctermfg=53 guibg=#111 ctermbg=234
+endif
+
+" colors }}}1
 
 " ExpandAllFolds {{{1
 
