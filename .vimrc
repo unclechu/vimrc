@@ -72,6 +72,12 @@ digraphs 3. 8230 "dots
 " colors {{{1
 
 let g:colorscheme = 'solarized'
+
+" terminal mode
+if !has("gui_running")
+    let g:colorscheme = 'darkburn'
+endif
+
 set t_Co=256
 exec 'colorscheme ' . g:colorscheme
 
