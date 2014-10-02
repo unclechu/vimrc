@@ -311,7 +311,7 @@ command ToggleAutoClose call ToggleAutoClose(0)
 nmap <Leader>b <Esc>:ToggleAutoClose<CR>
 
 "enable autoclose at start
-call ToggleAutoClose(1)
+"call ToggleAutoClose(1)
 
 "autoclose }}}1
 
