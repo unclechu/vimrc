@@ -163,7 +163,7 @@ if has("gui_running") " gui {{{1
 endif " gui }}}1
 
 "python-mode configs
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_cwindow = 0
