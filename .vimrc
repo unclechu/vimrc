@@ -52,7 +52,7 @@ unlet g:tmp_dir
 
 syntax on
 
-let NERDTreeIgnore = ['\.swp', '\.pyc']
+let NERDTreeIgnore = ['\.swp', '\.swo', '\.pyc', '__pycache__']
 
 "hot keys
 map <F5> :NERDTreeMirrorToggle<CR>
@@ -183,7 +183,9 @@ let g:pymode_breakpoint_key = '<leader>e'
 "auto syntax hilight
 if has('autocmd')
 	autocmd BufNewFile,BufRead *.json set ft=javascript
+	autocmd BufNewFile,BufRead *.json.example set ft=javascript
 	autocmd BufNewFile,BufRead *.gyp set ft=javascript
+	autocmd BufNewFile,BufRead *.yaml.example set ft=yaml
 	autocmd BufNewFile,BufRead Makefile set noexpandtab
 	autocmd BufNewFile,BufRead *.ejs set ft=html
 	autocmd BufNewFile,BufRead *.scss set ft=scss.css
