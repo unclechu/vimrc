@@ -180,6 +180,14 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = '<leader>e'
 
+function! ClearOnlySpacesAtEndOfLines()
+	try
+		exec "%s/[ ]\\+$//g"
+	catch
+	endtry
+endfunction
+command ClearOnlySpacesAtEndOfLines call ClearOnlySpacesAtEndOfLines()
+
 "auto syntax hilight
 if has('autocmd')
 	autocmd BufNewFile,BufRead *.json set ft=javascript
@@ -189,6 +197,8 @@ if has('autocmd')
 	autocmd BufNewFile,BufRead Makefile set noexpandtab
 	autocmd BufNewFile,BufRead *.ejs set ft=html
 	autocmd BufNewFile,BufRead *.scss set ft=scss.css
+	autocmd BufNewFile,BufRead *.scss set ft=scss.css
+	autocmd BufWritePre * call ClearOnlySpacesAtEndOfLines()
 endif
 
 "autosave global session
@@ -228,8 +238,10 @@ function! ResetKeymap()
 endfunction
 command ResetKeymap call ResetKeymap()
 
-autocmd InsertEnter * call ResetKeymap()
-autocmd InsertLeave * call ResetKeymap()
+if has('autocmd')
+	autocmd InsertEnter * call ResetKeymap()
+	autocmd InsertLeave * call ResetKeymap()
+endif
 
 ResetKeymap
 
